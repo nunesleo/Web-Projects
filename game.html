@@ -4,59 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="./game.js" defer></script>
+    <script src="./game/game.js" defer></script>
 </head>
+
+<nav class="text-white flex flex-row space-x-8 p-4">
+    <a href="./game.html" target="blank" class="font-light hover:underline">
+        <p> Main Game <i class="fa-solid fa-gamepad"></i></p>
+    </a>
+    <a href="./binomialdistribution.html" target="blank" class="font-light hover:underline">
+        <p> Binomial Distribution <i class="fa-solid fa-gamepad"></i></p>
+    </a>
+</nav>
 
 <body class="bg-[#2b487b]">
     <section class="w-full min-h-screen flex items-center">
         <div class="bg-[#dddddd] p-2 w-full flex items-center justify-center space-x-8">
             <div class="py-10 flex w-1/2 items-center justify-center">
                 <div class="flex flex-col space-y-2 py-8 items-center rounded-md w-2/3">
-                    <div class="flex flex-col space-y-2 rounded-md p-4 w-full bg-[#e7e7e7] border-2 border-[#b6b6b6] text-sm">
+                    <div
+                        class="flex flex-col space-y-2 rounded-md p-4 w-full bg-[#e7e7e7] border-2 border-[#b6b6b6] text-sm">
                         <p>You arrived at the court to play a hidden game you found on someone’s portfolio.
-                            Wait... there are already two players on the court! Maybe you should let them finish their match first. <span class="font-bold">Click Play</span></p>
+                            Wait... there are already two players on the court! Maybe you should let them finish their
+                            match first. <span class="font-bold">Click Play</span></p>
 
                         <p>Who knows when their game will end? Maybe the first to reach 10 points... maybe 50...
-                        Well, take a seat, cheer for your favorite player, or try to keep things balanced.</p>
-                        
+                            Well, take a seat, cheer for your favorite player, or try to keep things balanced.</p>
+
                     </div>
-                    <div class="flex flex-col space-y-2 rounded-md p-4 w-full bg-[#e7e7e7] border-2 border-[#b6b6b6] text-sm">
-                        <p>Each player starts with equal chances to score. But just like us humans, they can occasionally make critical mistakes.</p>
+                    <div
+                        class="flex flex-col space-y-2 rounded-md p-4 w-full bg-[#e7e7e7] border-2 border-[#b6b6b6] text-sm">
+                        <p>Each player starts with equal chances to score. But just like us humans, they can
+                            occasionally make critical mistakes.</p>
 
-                        <p><span class="font-bold">Boo</span> a player, and they might get frustrated and lose focus. <span class="font-bold">Cheer</span> them on, and they’ll get sharper and more precise.</p>
+                        <p><span class="font-bold">Boo</span> a player, and they might get frustrated and lose focus.
+                            <span class="font-bold">Cheer</span> them on, and they’ll get sharper and more precise.</p>
 
-                        <p>Every shot is aimed... but a touch of randomness decides whether it hits the mark or flies embarrassingly wide.</p>
+                        <p>Every shot is aimed... but a touch of randomness decides whether it hits the mark or flies
+                            embarrassingly wide.</p>
                         <p>Let the beautiful chaos begin.</p>
                     </div>
 
-                    <div id="p1ScoreDiv" class="flex rounded-md p-4 w-full bg-[#e7e7e7] space-x-4 items-center border-2 border-[#b6b6b6]">
+                    <div id="p1ScoreDiv"
+                        class="flex rounded-md p-4 w-full bg-[#e7e7e7] space-x-4 items-center border-2 border-[#b6b6b6]">
                         <div class="bg-white p-1 rounded-lg">
                             <img src="./media/tyler.png">
                         </div>
                         <p id="p1Score">Tyler: 0</p>
                         <div class="flex flex-grow"></div>
                         <div class="flex flex-row space-x-2">
-                            <button id="supportTy" class="py-2 px-4 bg-[#3d5783] rounded-md items-center justify-center active:bg-blue-500 text-white"> Cheer</button>
-                            <button id="booTy" class="py-2 px-4 bg-[#3d5783] rounded-md items-center justify-center active:bg-blue-500 text-white"> Boo</button>
+                            <button id="supportTy"
+                                class="py-2 px-4 bg-[#3d5783] rounded-md items-center justify-center active:bg-blue-500 text-white">
+                                Cheer</button>
+                            <button id="booTy"
+                                class="py-2 px-4 bg-[#3d5783] rounded-md items-center justify-center active:bg-blue-500 text-white">
+                                Boo</button>
                         </div>
-                        
+
                     </div>
-                    <div id="p2ScoreDiv" class="flex rounded-md p-4 w-full bg-[#e7e7e7] space-x-4 items-center border-2 border-[#b6b6b6]">
+                    <div id="p2ScoreDiv"
+                        class="flex rounded-md p-4 w-full bg-[#e7e7e7] space-x-4 items-center border-2 border-[#b6b6b6]">
                         <div class="bg-white p-1 rounded-lg">
                             <img src="./media/thomas.png">
                         </div>
                         <p id="p2Score">Thomas: 0</p>
                         <div class="flex flex-grow"></div>
                         <div class="flex flex-row space-x-2">
-                            <button id="supportTh" class="py-2 px-4 bg-[#3d5783] rounded-md items-center justify-center active:bg-blue-500 text-white"> Cheer</button>
-                            <button id="booTh" class="py-2 px-4 bg-[#3d5783] rounded-md items-center justify-center active:bg-blue-500 text-white"> Boo</button>
+                            <button id="supportTh"
+                                class="py-2 px-4 bg-[#3d5783] rounded-md items-center justify-center active:bg-blue-500 text-white">
+                                Cheer</button>
+                            <button id="booTh"
+                                class="py-2 px-4 bg-[#3d5783] rounded-md items-center justify-center active:bg-blue-500 text-white">
+                                Boo</button>
                         </div>
                     </div>
 
-                    <button class="bg-[#2b487b] rounded-md p-2 w-full text-white hover:bg-[#325797] transition duration-200" id="restart">Play</button>
+                    <button
+                        class="bg-[#2b487b] rounded-md p-2 w-full text-white hover:bg-[#325797] transition duration-200"
+                        id="restart">Play</button>
                 </div>
             </div>
             <div class="w-1/2 flex justify-center">

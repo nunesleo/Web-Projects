@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="./game/binomialdistribution.js" defer></script>
+</head>
+
+<nav class="text-white flex flex-row space-x-8 p-4 bg-[#2b487b]">
+    <a href="./game.html" target="blank" class="font-light hover:underline">
+        <p> Main Game <i class="fa-solid fa-gamepad"></i></p>
+    </a>
+    <a href="./binomialdistribution.html" target="blank" class="font-light hover:underline">
+        <p> Binomial Distribution <i class="fa-solid fa-gamepad"></i></p>
+    </a>
+</nav>
+
+<body class="bg-[#dddddd]">
+    <section class="w-full min-h-screen flex items-center">
+        <div class="bg-[#dddddd] p-2 w-full flex items-center justify-center space-x-8">
+            <div class="py-10 flex w-1/2 items-center justify-center">
+                <div class="flex flex-col space-y-2 py-8 items-center rounded-md w-2/3">
+                    <div
+                        class="flex flex-col space-y-2 rounded-md p-4 w-full bg-[#e7e7e7] border-2 border-[#b6b6b6] text-sm">
+                        <p>Let's say we are interested in studying how Tyler plays.</p>
+
+                        <p>First let's simulate 10,000 shots and check how many of those Tyler makes</p>
+
+                        <p>For the sake of this experiement, Tyler will start from the same position every time, making sure that every trial is independent.</p>
+
+                    </div>
+                    
+
+                    <div id="p1ScoreDiv"
+                        class="flex rounded-md p-4 w-full bg-[#e7e7e7] space-x-4 items-center border-2 border-[#b6b6b6]">
+                        <div class="bg-white p-1 rounded-lg">
+                            <img src="./media/tyler.png">
+                        </div>
+                        <p id="p1Score">Tyler: 0</p>        
+                    </div>
+                    <button
+                        class="bg-[#2b487b] rounded-md p-2 w-full text-white hover:bg-[#325797] transition duration-200"
+                        id="restart">Play</button>
+                </div>
+            </div>
+            <div class="w-1/2 flex justify-center">
+                <canvas id="game" width="400" height="600" class="border-2 border-black"></canvas>
+            </div>
+        </div>
+    </section>
+</body>
